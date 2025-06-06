@@ -5,138 +5,238 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background-color: #f5f5f5;
-    color: #1a1a1a;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    color: #000000;
     line-height: 1.6;
     min-height: 100vh;
+    font-weight: 400;
 }
 
 .container {
     width: 100%;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px 20px;
 }
 
 .profile {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
 .profile-pic {
-    width: 140px;
-    height: 140px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
-    margin-bottom: 1.5rem;
-    border: 4px solid #fff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    margin-bottom: 2rem;
+    border: 8px solid #000000;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 0 2px #000000;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: #ffffff;
+    padding: 0;
+    filter: contrast(1.2) brightness(0.9);
 }
 
 .profile-pic:hover {
-    transform: scale(1.05);
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), 0 0 0 3px #000000;
+    filter: contrast(1.3) brightness(0.8);
 }
 
 .profile h1 {
-    font-size: 2.2rem;
-    margin-bottom: 0.75rem;
-    color: #1a1a1a;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #000000;
     font-weight: 700;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 20px rgba(255, 255, 255, 0.3);
 }
 
 .profile p {
-    color: #666;
+    color: #000000;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+.profile p a {
+    color: #000000;
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 0, 0, 0.5);
+    transition: text-decoration-color 0.3s ease;
+}
+
+.profile p a:hover {
+    text-decoration-color: #000000;
 }
 
 .links {
     display: grid;
-    gap: 1.2rem;
-    margin-top: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
 }
 
 .link-card {
     display: flex;
     align-items: center;
-    padding: 1.2rem;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 16px;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
     text-decoration: none;
-    color: #1a1a1a;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(10px);
+    color: #000000;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(20px);
+    position: relative;
+    overflow: hidden;
+}
+
+.link-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #f6d365 0%, #fda085 100%);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.link-card:hover::before {
+    transform: scaleX(1);
 }
 
 .link-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
     background: rgba(255, 255, 255, 1);
 }
 
 .link-card i {
-    font-size: 1.8rem;
-    margin-right: 1.2rem;
-    color: #4a90e2;
-    width: 28px;
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+    color: #e17055;
+    width: 40px;
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    flex-shrink: 0;
 }
 
 .link-card:hover i {
-    transform: scale(1.1);
+    transform: scale(1.15) rotate(5deg);
+    color: #d63031;
+}
+
+.link-content {
+    flex: 1;
 }
 
 .link-title {
     display: block;
-    font-weight: 600;
-    margin-bottom: 0.3rem;
-    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    color: #000000;
+    letter-spacing: -0.01em;
 }
 
 .link-description {
     display: block;
-    font-size: 0.9rem;
-    color: #666;
+    font-size: 1rem;
+    color: #333333;
+    line-height: 1.6;
+    font-weight: 400;
 }
 
 footer {
-    margin-top: 3rem;
+    margin-top: 4rem;
     text-align: center;
-    color: #666;
+    color: #000000;
+    padding: 2rem 0;
 }
 
 .social-links {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .social-links a {
-    color: #1a1a1a;
-    font-size: 1.8rem;
-    margin: 0 0.8rem;
+    color: #000000;
+    font-size: 2rem;
+    margin: 0 1rem;
     text-decoration: none;
-    transition: all 0.3s ease;
-    opacity: 0.8;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-block;
 }
 
 .social-links a:hover {
-    color: #4a90e2;
-    opacity: 1;
-    transform: translateY(-2px);
+    color: #333333;
+    transform: translateY(-3px) scale(1.1);
 }
 
-@media (max-width: 600px) {
+footer p {
+    font-size: 0.95rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
     .container {
-        padding: 1rem;
+        padding: 20px 15px;
+    }
+    
+    .profile {
+        padding: 2rem 0;
+        margin-bottom: 3rem;
     }
     
     .profile-pic {
-        width: 100px;
-        height: 100px;
+        width: 120px;
+        height: 120px;
+    }
+    
+    .profile h1 {
+        font-size: 2.2rem;
+    }
+    
+    .profile p {
+        font-size: 1rem;
+    }
+    
+    .links {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
     }
     
     .link-card {
-        padding: 0.8rem;
+        padding: 1.5rem;
+    }
+    
+    .link-card i {
+        font-size: 1.8rem;
+        margin-right: 1rem;
+    }
+    
+    .link-title {
+        font-size: 1.1rem;
+    }
+    
+    .link-description {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile h1 {
+        font-size: 1.8rem;
+    }
+    
+    .link-card {
+        padding: 1.2rem;
     }
 } 
