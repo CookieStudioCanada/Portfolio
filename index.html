@@ -3,19 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f6d365">
     <title>Cookie Technologies</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <header class="navbar navbar-expand-lg fixed-top py-3 px-4" style="background-color: #fda085; box-shadow: 0 2px 20px rgba(0,0,0,0.15);">
+        <span class="navbar-brand fw-bold text-dark mb-0">
+            <img src="logo.svg" alt="Cookie Technologies" class="header-logo">Cookie Technologies
+        </span>
+        <a href="mailto:cookietechnologiescanada@gmail.com" class="btn btn-dark btn-sm fw-bold px-4 py-2 ms-auto">
+            <i class="fas fa-envelope"></i>
+            <span class="d-none d-sm-inline ms-2">Me contacter</span>
+        </a>
+    </header>
     <div class="container">
-        <div class="profile">
-            <img src="logo.svg" alt="Cookie Technologies Logo" class="profile-pic">
-            <h1>Cookie Technologies</h1>
-            <p>Projets en cours 🚀 Prenez note que certains projets sont en cours de développement et sont à des stades de développement variés. Plusieurs features sont manquants ou non fonctionnelles. Pour toutes questions, signaler un bug, demande de features, etc. veuillez m'écrire au <a href="mailto:cookietechnologiescanada@gmail.com">cookietechnologiescanada@gmail.com</a>.</p>
+        <div class="profile mb-5">
+            <img src="logo.svg" alt="Cookie Technologies" class="profile-logo">
+            <p>Voici les projets en cours de développement! Stade de développement varie énormément d'un projet à l'autre. Plusieurs fonctionnalités sont manquantes ou non fonctionnelles. <a href="mailto:cookietechnologiescanada@gmail.com" style="text-decoration: underline; font-weight: bold; color: #000000;">Écrivez-moi</a> pour toutes questions, signaler un bug, demande de fonctionnalités, etc.</p>
         </div>
 
         <div class="links">
@@ -23,35 +33,49 @@
                 <i class="fas fa-edit"></i>
                 <div class="link-content">
                     <span class="link-title">Peter</span>
-                    <span class="link-description">Application de traitement de texte avec assistant d'intelligence artificielle intégré.</span>
-                </div>
-            </a>
-            <a href="https://cookiestudiocanada.github.io/FJT/" class="link-card" target="_blank">
-                <i class="fas fa-chart-line"></i>
-                <div class="link-content">
-                    <span class="link-title">FJT</span>
-                    <span class="link-description">Application de planification financière avec visualisation des données.</span>
-                </div>
-            </a>
-            <a href="https://saas0102-gemini.web.app/" class="link-card" target="_blank">
-                <i class="fas fa-receipt"></i>
-                <div class="link-content">
-                    <span class="link-title">Paperwise</span>
-                    <span class="link-description">Outil de gestion des dépenses. Importez vos reçus pour un classement automatique.</span>
-                </div>
-            </a>
-            <a href="https://cookiestudiocanada.github.io/Meme-Generator/" class="link-card" target="_blank">
-                <i class="fas fa-laugh"></i>
-                <div class="link-content">
-                    <span class="link-title">Meme Creator</span>
-                    <span class="link-description">Créez des mèmes personnalisés avec des outils d'édition d'images et d'effets de texte.</span>
+                    <span class="link-description">Votre assistant personnel qui vous aide à mieux rédiger.</span>
                 </div>
             </a>
             <a href="http://cookiestudiocanada.github.io/316/" class="link-card" target="_blank">
                 <i class="fas fa-apple-alt"></i>
                 <div class="link-content">
                     <span class="link-title">Nutrition</span>
-                    <span class="link-description">Calculez vos besoins caloriques et analysez votre alimentation quotidienne.</span>
+                    <span class="link-description">Votre assistant nutritionnel. Analysez votre alimentation quotidienne.</span>
+                </div>
+            </a>
+            <a href="https://cookiestudiocanada.github.io/FJT/" class="link-card" target="_blank">
+                <i class="fas fa-chart-line"></i>
+                <div class="link-content">
+                    <span class="link-title">FJT</span>
+                    <span class="link-description">Plateforme de planification financière avec visualisation des données.</span>
+                </div>
+            </a>
+            <a href="https://saas0102-gemini.web.app/" class="link-card" target="_blank">
+                <i class="fas fa-receipt"></i>
+                <div class="link-content">
+                    <span class="link-title">Paperwise</span>
+                    <span class="link-description">Analyse automatique des reçus pour un classement automatique.</span>
+                </div>
+            </a>
+            <a href="https://cookiestudiocanada.github.io/Cookie-Tax-V2/" class="link-card" target="_blank">
+                <i class="fas fa-calculator"></i>
+                <div class="link-content">
+                    <span class="link-title">Cookie Tax</span>
+                    <span class="link-description">Calculateurs fiscaux pour le Québec et le Canada.</span>
+                </div>
+            </a>
+            <a href="https://cookiestudiocanada.github.io/BizDev/" class="link-card" target="_blank">
+                <i class="fas fa-briefcase"></i>
+                <div class="link-content">
+                    <span class="link-title">BizDev</span>
+                    <span class="link-description">Plateforme de développement des affaires.</span>
+                </div>
+            </a>
+            <a href="https://cookiestudiocanada.github.io/Meme-Generator/" class="link-card" target="_blank">
+                <i class="fas fa-laugh"></i>
+                <div class="link-content">
+                    <span class="link-title">Meme Creator</span>
+                    <span class="link-description">Plateforme de création de mèmes personnalisés.</span>
                 </div>
             </a>
             <a href="http://cookiestudiocanada.github.io/BigChan/" class="link-card" target="_blank">
@@ -61,11 +85,18 @@
                     <span class="link-description">Venez discuter avec BigChan, votre ami virtuel toujours à l'écoute.</span>
                 </div>
             </a>
+            <a href="https://tracktoute.web.app/app.html" class="link-card" target="_blank">
+                <i class="fas fa-project-diagram"></i>
+                <div class="link-content">
+                    <span class="link-title">Tracktoute</span>
+                    <span class="link-description">Suivez vos projets avec des tableaux Kanban et des outils de gestion.</span>
+                </div>
+            </a>
             <a href="https://bookmaker-f7b1c.web.app" class="link-card" target="_blank">
                 <i class="fas fa-handshake"></i>
                 <div class="link-content">
                     <span class="link-title">Bookmaker</span>
-                    <span class="link-description">Créez et partagez des paris amicaux avec vos amis en devenant votre propre bookmaker.</span>
+                    <span class="link-description">Créez et partagez des paris amicaux en devenant bookmaker.</span>
                 </div>
             </a>
             <a href="https://ee-2023-5a73f.web.app/app.html" class="link-card" target="_blank">
@@ -80,13 +111,6 @@
                 <div class="link-content">
                     <span class="link-title">Table</span>
                     <span class="link-description">Tableur en ligne avec formules avancées.</span>
-                </div>
-            </a>
-            <a href="https://cookiestudiocanada.github.io/2709/" class="link-card" target="_blank">
-                <i class="fas fa-project-diagram"></i>
-                <div class="link-content">
-                    <span class="link-title">Tracktoute</span>
-                    <span class="link-description">Suivez vos projets avec des tableaux Kanban et des outils de gestion.</span>
                 </div>
             </a>
             <a href="https://fireplate-saas.web.app" class="link-card" target="_blank">
@@ -114,15 +138,16 @@
                 <i class="fas fa-crown"></i>
                 <div class="link-content">
                     <span class="link-title">Blackjack King's Bounty</span>
-                    <span class="link-description">Version avancée du Blackjack avec mise bonus King's Bounty et règles Free Bet spéciales.</span>
+                    <span class="link-description">Version du Blackjack avec King's Bounty et règles Free Bet.</span>
                 </div>
             </a>
         </div>
 
         <footer>
-            <p>© Cookie Technologies inc. (2025)</p>
+            <p style="font-weight: 500; letter-spacing: 0.5px;">© Cookie Technologies inc. (2025)</p>
         </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html> 
